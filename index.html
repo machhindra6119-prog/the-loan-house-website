@@ -4,786 +4,661 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Loan House | Smart Finance Solutions Under One Roof</title>
+
 <meta name="description" content="Home Loan, Personal Loan, Business Loan, Gold Loan, Loan Against Property, Working Capital and more.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+
+
 <style>
-:root {
-  --red: #e53935;
-  --red-hover: #c62828;
-  --blue: #0046a0;
-  --dark-blue: #0a192f;
-  --light: #f4f7fc;
-  --white: #ffffff;
-  --text-main: #2c3e50;
-  --text-muted: #627d98;
-  --radius: 12px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+:root{
+--red:#e53935;
+--yellow:#ffcc00;
+--blue:#0057c2;
+--light:#f5f7fb;
+--white:#ffffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: var(--light);
-  color: var(--text-main);
-  line-height: 1.6;
+body{
+font-family:'Poppins',sans-serif;
+background:var(--light);
+color:#333;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
-section {
-  padding: 80px 0;
+section{
+padding:80px 0;
 }
 
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: var(--blue);
-  font-weight: 700;
+h2{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:15px;
+color:var(--blue);
 }
 
-.sub {
-  text-align: center;
-  color: var(--text-muted);
-  margin-bottom: 40px;
-  font-size: 1.1rem;
+.sub{
+text-align:center;
+color:#666;
+margin-bottom:40px;
 }
 
 /* NAVBAR */
-nav {
-  background: var(--white);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 20px rgba(0,0,0,.05);
+
+nav{
+background:white;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
 }
 
-.nav-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5%;
+.nav-wrap{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
 }
 
-.logo {
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: var(--blue);
-  letter-spacing: -0.5px;
+.logo{
+font-size:1.8rem;
+font-weight:800;
+color:var(--blue);
 }
 
-.logo span {
-  color: var(--red);
+.logo span{
+color:var(--red);
 }
 
-.menu {
-  display: flex;
-  gap: 25px;
+.menu{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.menu a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--text-main);
-  transition: color 0.2s;
-}
-
-.menu a:hover {
-  color: var(--blue);
+.menu a{
+text-decoration:none;
+font-weight:600;
+color:#333;
 }
 
 /* HERO */
-.hero {
-  background: radial-gradient(circle at top right, var(--blue), var(--dark-blue));
-  color: var(--white);
-  text-align: center;
-  padding: 120px 20px 140px 20px;
+
+.hero{
+background:linear-gradient(135deg,var(--blue),#0a84ff,var(--yellow));
+color:white;
+text-align:center;
+padding:100px 20px;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  max-width: 900px;
-  margin: auto;
+.hero h1{
+font-size:3.8rem;
+font-weight:800;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: 25px auto;
-  font-size: 1.2rem;
-  opacity: 0.9;
+.hero p{
+max-width:850px;
+margin:20px auto;
+font-size:1.2rem;
 }
 
-.hero-btn {
-  display: inline-block;
-  background: var(--red);
-  color: var(--white);
-  padding: 16px 36px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4);
-  transition: transform 0.2s, background 0.2s;
-}
-
-.hero-btn:hover {
-  transform: translateY(-2px);
-  background: var(--red-hover);
+.hero-btn{
+display:inline-block;
+background:var(--red);
+color:white;
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+margin-top:15px;
 }
 
 /* STATS */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: -60px;
-  position: relative;
-  z-index: 10;
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:-40px;
 }
 
-.stat {
-  background: var(--white);
-  padding: 30px 20px;
-  border-radius: var(--radius);
-  text-align: center;
-  box-shadow: var(--shadow);
-  border-bottom: 4px solid #e2e8f0;
+.stat{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.stat h3 {
-  color: var(--blue);
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 5px;
+.stat h3{
+color:var(--blue);
+font-size:2rem;
 }
 
-.stat p {
-  color: var(--text-muted);
-  font-weight: 500;
+/* LOANS */
+
+.loan-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
-/* PORTFOLIO IMAGE SECTION */
-.visual-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  margin-bottom: 50px;
+.loan{
+background:white;
+padding:25px;
+border-radius:18px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+border-top:5px solid var(--red);
+transition:.3s;
 }
 
-.gallery-card {
-  position: relative;
-  height: 200px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
+.loan:hover{
+transform:translateY(-8px);
 }
 
-.gallery-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.gallery-card:hover img {
-  transform: scale(1.1);
-}
-
-.gallery-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.8));
-  color: var(--white);
-  padding: 15px;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-/* TABBED LOANS CONTROL */
-.tab-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 35px;
-  flex-wrap: wrap;
-}
-
-.tab-btn {
-  padding: 10px 24px;
-  border: 2px solid #cbd5e1;
-  background: var(--white);
-  color: var(--text-main);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.tab-btn.active, .tab-btn:hover {
-  background: var(--blue);
-  color: var(--white);
-  border-color: var(--blue);
-}
-
-.loan-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-}
-
-.loan {
-  background: var(--white);
-  padding: 30px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border-left: 5px solid var(--blue);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.loan:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-
-.loan h3 {
-  color: var(--dark-blue);
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.loan p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+.loan h3{
+color:var(--blue);
+margin-bottom:10px;
 }
 
 /* CONSULTING */
-.consult {
-  background: linear-gradient(135deg, var(--blue), var(--dark-blue));
-  padding: 60px 40px;
-  border-radius: var(--radius);
-  color: var(--white);
-  box-shadow: var(--shadow);
+
+.consult{
+background:linear-gradient(135deg,var(--red),#ff6b6b,var(--yellow));
+padding:60px 30px;
+border-radius:25px;
+color:white;
+text-align:center;
 }
 
-.consult h2 {
-  color: var(--white);
-  text-align: left;
-  font-size: 2.2rem;
+.consult h2{
+color:white;
 }
 
-.consult p {
-  margin: 15px 0 30px 0;
-  max-width: 800px;
-  opacity: 0.9;
+.consult ul{
+list-style:none;
+margin-top:20px;
 }
 
-.consult ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.consult li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 500;
+.consult li{
+padding:6px;
 }
 
 /* WHY US */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-.feature {
-  background: var(--white);
-  padding: 35px 25px;
-  border-radius: var(--radius);
-  text-align: center;
-  box-shadow: var(--shadow);
+.feature{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.feature h3 {
-  color: var(--blue);
-  margin-bottom: 10px;
+/* EMI */
+
+.emi{
+background:white;
+padding:30px;
+border-radius:20px;
+max-width:700px;
+margin:auto;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
-.feature p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+.emi input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
 }
 
-/* EMI CALCULATOR */
-.emi-container {
-  background: var(--white);
-  padding: 40px;
-  border-radius: var(--radius);
-  max-width: 800px;
-  margin: auto;
-  box-shadow: var(--shadow);
+.emi button{
+width:100%;
+padding:14px;
+background:var(--blue);
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
 }
 
-.calculator-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-
-.input-group label {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: var(--dark-blue);
-}
-
-.input-group label span {
-  color: var(--blue);
-}
-
-.emi-container input[type="range"] {
-  width: 100%;
-  accent-color: var(--blue);
-  height: 6px;
-  background: #e2e8f0;
-  border-radius: 5px;
-  outline: none;
-}
-
-.result-card {
-  background: var(--light);
-  padding: 25px;
-  border-radius: var(--radius);
-  text-align: center;
-  border: 2px dashed #cbd5e1;
-}
-
-.result-card h4 {
-  color: var(--text-muted);
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-}
-
-.result-val {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--blue);
-  margin: 5px 0;
-}
-
-/* INTERACTIVE LEAD CAPTURE FORM */
-.callback-form {
-  margin-top: 30px;
-  background: var(--light);
-  padding: 25px;
-  border-radius: var(--radius);
-  border: 1px solid #e2e8f0;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.callback-form input, .callback-form select {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-family: 'Poppins', sans-serif;
-  outline: none;
-}
-
-.callback-form input:focus, .callback-form select:focus {
-  border-color: var(--blue);
-}
-
-.submit-btn {
-  background: var(--blue);
-  color: var(--white);
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.2s;
-}
-
-.submit-btn:hover {
-  background: var(--dark-blue);
+.result{
+margin-top:15px;
+font-size:1.2rem;
+font-weight:700;
+text-align:center;
 }
 
 /* FAQ */
-.faq-wrap {
-  max-width: 800px;
-  margin: auto;
-}
 
-.faq {
-  background: var(--white);
-  padding: 20px 25px;
-  border-radius: var(--radius);
-  margin-bottom: 15px;
-  box-shadow: var(--shadow);
-}
-
-.faq h3 {
-  font-size: 1.1rem;
-  color: var(--dark-blue);
-  margin-bottom: 8px;
-}
-
-.faq p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+.faq{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 /* CONTACT */
-.contact {
-  background: var(--white);
-  padding: 40px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  max-width: 800px;
-  margin: auto;
+
+.contact{
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+max-width:800px;
+margin:auto;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-bottom: 25px;
-}
-
-.contact-item {
-  padding: 15px;
-  background: var(--light);
-  border-radius: var(--radius);
-}
-
-.contact-item strong {
-  display: block;
-  color: var(--dark-blue);
-  font-size: 0.9rem;
-}
-
-.address-box {
-  border-top: 1px solid #e2e8f0;
-  padding-top: 20px;
+.contact p{
+margin-bottom:10px;
 }
 
 /* FOOTER */
-footer {
-  background: var(--dark-blue);
-  color: var(--white);
-  text-align: center;
-  padding: 40px 20px;
-  margin-top: 50px;
-}
 
-footer p {
-  opacity: 0.7;
-  font-size: 0.9rem;
-  margin-top: 5px;
+footer{
+background:var(--blue);
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
 }
 
 /* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  padding: 14px 25px;
-  border-radius: 50px;
-  font-weight: 700;
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  z-index: 1000;
-  transition: transform 0.2s;
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:15px 20px;
+border-radius:50px;
+font-weight:700;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
 }
 
-.whatsapp:hover {
-  transform: scale(1.05);
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.3rem;
 }
 
-/* RESPONSIVE DESIGN */
-@media(max-width: 768px) {
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-  .menu {
-    display: none;
-  }
-  section {
-    padding: 60px 0;
-  }
+.menu{
+display:none;
 }
+
+}
+
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-wrap">
-    <div class="logo">THE <span>LOAN HOUSE</span></div>
-    <div class="menu">
-      <a href="#loans">Loans</a>
-      <a href="#consulting">Consulting</a>
-      <a href="#emi">EMI Calculator</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+<div class="nav-wrap">
+<div class="logo">THE <span>LOAN HOUSE</span></div>
+<div class="menu">
+<a href="#loans">Loans</a>
+<a href="#consulting">Consulting</a>
+<a href="#emi">EMI Calculator</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
 </nav>
 
 <section class="hero">
-  <h1>Smart Finance Solutions Under One Roof</h1>
-  <p>Compare offers from 100+ Banks & NBFCs and secure the best financing options with absolute transparency.</p>
-  <a href="#consulting" class="hero-btn">FREE CONSULTATION</a>
+<h1>SMART FINANCE SOLUTIONS UNDER ONE ROOF</h1>
+
+<p>
+Compare offers from 100+ Banks & NBFCs and find the best financing solution with expert guidance.
+</p>
+
+<div class="finance-image-box">
+  
+</div>
+
+    
+<a href="#consulting" class="hero-btn">
+FREE CONSULTATION
+</a>
 </section>
 
 <div class="container">
-  <div class="stats">
-    <div class="stat">
-      <h3>100+</h3>
-      <p>Banks & NBFCs</p>
-    </div>
-    <div class="stat">
-      <h3>Fast</h3>
-      <p>Loan Processing</p>
-    </div>
-    <div class="stat">
-      <h3>Expert</h3>
-      <p>Financial Guidance</p>
-    </div>
-    <div class="stat">
-      <h3>Trusted</h3>
-      <p>Loan Partner</p>
-    </div>
-  </div>
+
+<div class="stats">
+
+<div class="stat">
+<h3>100+</h3>
+<p>Banks & NBFCs</p>
+</div>
+
+<div class="stat">
+<h3>Fast</h3>
+<p>Loan Processing</p>
+</div>
+
+<div class="stat">
+<h3>Expert</h3>
+<p>Financial Guidance</p>
+</div>
+
+<div class="stat">
+<h3>Trusted</h3>
+<p>Loan Partner</p>
+</div>
+
+</div>
+
 </div>
 
 <section id="loans">
-  <div class="container">
-    <h2>Our Loan Solutions</h2>
-    <p class="sub">Finance solutions designed for every stage of life and business operations.</p>
-    
-    <!-- Property & Asset Showcase Images -->
-    <div class="visual-gallery">
-      <div class="gallery-card">
-        <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTEW3ek2FCauZlhWrYwNJngH-PtuNgHxGa9nMyWj4b877My_7tm3g8fydZJZQztt6XIzIyJ3tBkh4kziWc" alt="Residential Real Estate Property">
-        <div class="gallery-label">Home & Property Mortgages</div>
-      </div>
-      <div class="gallery-card">
-        <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcR6pS8OyQ2vePTLQpzeH7h2sjeeFB8pSWHT6SAZiMVmEHxVV-I4lhi1sr7dU3BuMMhV0N6YoF-xXVtDzRE" alt="Commercial Corporate Building">
-        <div class="gallery-label">Business & Project Funding</div>
-      </div>
-      <div class="gallery-card">
-        <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRrhz78Stpa-lYDoH6P1clQrLD7tj5ibVhRmV_V26WpciFBc5_S4PM5D89t9T5l4ijzBJV-3YLkaG4oH2o" alt="Gold Assets and Liquidity Management">
-        <div class="gallery-label">Instant Gold Asset Liquidity</div>
-      </div>
-      <div class="gallery-card">
-        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQx_DZ17IjPqi_t2t2dgumvkNYmNIWSMOHgeGMTKq6xLXFk2sNpOBu-YTLtGK0XjQlU15S2BGoryjYfWEY" alt="Heavy Machinery Commercial Assets">
-        <div class="gallery-label">Industrial Equipment Credits</div>
-      </div>
-    </div>
 
-    <!-- Category Filter Controls -->
-    <div class="tab-container">
-      <button class="tab-btn active" onclick="filterLoans('all', this)">Show All</button>
-      <button class="tab-btn" onclick="filterLoans('retail', this)">Retail & Personal</button>
-      <button class="tab-btn" onclick="filterLoans('business', this)">Business & Operations</button>
-      <button class="tab-btn" onclick="filterLoans('specialized', this)">Specialized Programs</button>
-    </div>
-    
-    <div class="loan-grid" id="loan-grid-wrapper">
-      <!-- Retail -->
-      <div class="loan" data-category="retail">
-        <h3>🏠 Home Loan</h3>
-        <p>Turn your dream home into reality with competitive interest rates and affordable structures.</p>
-      </div>
-      <div class="loan" data-category="retail">
-        <h3>💳 Personal Loan</h3>
-        <p>Quick financial support for family travel, milestones, education, or personal emergencies.</p>
-      </div>
-      <div class="loan" data-category="retail">
-        <h3>🚗 Used Car Loan</h3>
-        <p>Drive home preferred pre-owned vehicles with reliable and quick structural financing support.</p>
-      </div>
-      <div class="loan" data-category="retail">
-        <h3>🪙 Gold Loan</h3>
-        <p>Instant funding cycles backstopped by physical gold assets, requiring minimal documentation overhead.</p>
-      </div>
-      <div class="loan" data-category="retail">
-        <h3>🚘 New Vehicle Loan</h3>
-        <p>Smooth pathways down to your chosen dealership floor with minimal transaction friction.</p>
-      </div>
-      <div class="loan" data-category="retail">
-        <h3>💼 Credit Card Assistance</h3>
-        <p>Select tailored spending options matching personal habits with reward optimization.</p>
-      </div>
-      <div class="loan" data-category="retail">
-        <h3>🎓 Education Loan</h3>
-        <p>Fund your academic horizons worldwide with student-friendly, delayed repayment timelines.</p>
-      </div>
+<div class="container">
 
-      <!-- Business -->
-      <div class="loan" data-category="business">
-        <h3>🏢 Business Loan</h3>
-        <p>Expand footprints and scale your business operations with customizable dynamic funding.</p>
-      </div>
-      <div class="loan" data-category="business">
-        <h3>📈 Working Capital</h3>
-        <p>Keep your daily business production pipelines moving without running into sudden shortfalls.</p>
-      </div>
-      <div class="loan" data-category="business">
-        <h3>🏘 Loan Against Property</h3>
-        <p>Unlock hidden latent value from your existing real estate assets without liquidating ownership.</p>
-      </div>
-      <div class="loan" data-category="business">
-        <h3>🏗 Commercial Equipment Loan</h3>
-        <p>Acquire enterprise machinery assets cleanly without burning working operational reserves upfront.</p>
-      </div>
-      <div class="loan" data-category="business">
-        <h3>⚙ Machinery Loan</h3>
-        <p>Keep production capabilities up to modern benchmarks with custom repayment structures.</p>
-      </div>
-      <div class="loan" data-category="business">
-        <h3>💰 OD / CC</h3>
-        <p>Flexible credit options ensuring constant capital flexibility aligned to natural market cycles.</p>
-      </div>
+<h2>Our Loan Solutions</h2>
 
-      <!-- Specialized -->
-      <div class="loan" data-category="specialized">
-        <h3>👨‍⚕️ Doctor Loan</h3>
-        <p>Customized financial products serving medical industry practitioners, clinics, and upgrade projects.</p>
-      </div>
-      <div class="loan" data-category="specialized">
-        <h3>📊 Project Finance</h3>
-        <p>Secure full-cycle structured capital coverage starting straight from planning blueprints.</p>
-      </div>
-      <div class="loan" data-category="specialized">
-        <h3>🏢 Construction Finance</h3>
-        <p>Developer-focused options built to support physical timelines securely from foundation to fitout.</p>
-      </div>
-      <div class="loan" data-category="specialized">
-        <h3>🏠 Loan Against Rent</h3>
-        <p>Convert future reliable rental streams into direct current asset deployment capital immediately.</p>
-      </div>
-    </div>
-  </div>
+<p class="sub">
+Finance solutions designed for every stage of life and business.
+</p>
+
+<div class="loan-grid">
+
+<div class="loan">
+<h3>🏠 Home Loan</h3>
+<p>Turn your dream home into reality with attractive interest rates and affordable EMIs.</p>
+</div>
+
+<div class="loan">
+<h3>💳 Personal Loan</h3>
+<p>Quick financial support for travel, weddings, education and emergencies.</p>
+</div>
+
+<div class="loan">
+<h3>🏢 Business Loan</h3>
+<p>Expand and grow your business with flexible funding solutions.</p>
+</div>
+
+<div class="loan">
+<h3>📈 Working Capital</h3>
+<p>Keep your business operations running smoothly with smart capital support.</p>
+</div>
+
+<div class="loan">
+<h3>🏘 Loan Against Property</h3>
+<p>Unlock the value of your property without selling your assets.</p>
+</div>
+
+<div class="loan">
+<h3>🪙 Gold Loan</h3>
+<p>Instant funds against your gold with minimal paperwork.</p>
+</div>
+
+<div class="loan">
+<h3>🚗 Used Car Loan</h3>
+<p>Drive home your preferred pre-owned vehicle with flexible financing.</p>
+</div>
+
+<div class="loan">
+<h3>💼 Credit Card Assistance</h3>
+<p>Choose the right card with expert guidance and exclusive offers.</p>
+</div>
+
+<div class="loan">
+<h3>👨‍⚕️ Doctor Loan</h3>
+<p>Special financial solutions for healthcare professionals and clinics.</p>
+</div>
+
+<div class="loan">
+    <h3>🎓 Education Loan</h3>
+    <p>Fund your education with flexible repayment options.</p>
+</div>
+
+<div class="loan">
+    <h3>🚘 New Vehicle Loan</h3>
+    <p>Your dream car keys are just one loan away.</p>
+</div>
+
+<div class="loan">
+    <h3>🏗 Commercial Equipment Loan</h3>
+    <p>A solution to power your business, not your expenses.</p>
+</div>
+
+<div class="loan">
+    <h3>⚙ Machinery Loan</h3>
+    <p>Big machines, small EMIs, zero downtime.</p>
+</div>
+
+<div class="loan">
+    <h3>📊 Project Finance</h3>
+    <p>From blueprint to completion, finance every phase.</p>
+</div>
+
+<div class="loan">
+    <h3>🏢 Construction Finance</h3>
+    <p>Finance to build faster and worry less.</p>
+</div>
+
+<div class="loan">
+    <h3>💰 OD / CC</h3>
+    <p>Your business never sleeps, neither should your credit.</p>
+</div>
+
+<div class="loan">
+    <h3>🏠 Loan Against Rent</h3>
+    <p>Turn your rental income into instant capital.</p>
+</div>
+  
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <section id="consulting">
-  <div class="container">
-    <div class="consult">
-      <h2>🎯 FREE CONSULTING SESSION</h2>
-      <p>Unsure which financial product fits best? Our specialized advisory desk maps variables across underwriting houses, assesses approval odds, and aligns solutions directly with your position—completely free.</p>
-      <ul>
-        <li>✔ Personalized Financial Guidance</li>
-        <li>✔ Loan Eligibility Assessment</li>
-        <li>✔ Documentation Assistance</li>
-        <li>✔ Best Bank Comparison</li>
-        <li>✔ No Hidden Consultation Charges</li>
-      </ul>
 
-      <!-- Interactive Eligibility Pre-Check / Callback Widget -->
-      <div class="callback-form">
-        <h4 style="color: var(--dark-blue); margin-bottom: 15px;">Request Expert Call-Back & Eligibility Pre-Screening</h4>
-        <form id="leadForm" onsubmit="handleFormSubmit(event)">
-          <div class="form-grid">
-            <input type="text" id="clientName" placeholder="Your Full Name" required>
-            <input type="tel" id="clientPhone" placeholder="Mobile Number" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
-            <select id="loanChoice" required>
-              <option value="" disabled selected>Select Desired Loan Type</option>
-              <option value="Home Loan">Home Loan</option>
-              <option value="Business Loan">Business Loan / Working Capital</option>
-              <option value="Personal Loan">Personal Loan</option>
-              <option value="Property Mortgage">Loan Against Property</option>
-              <option value="Other">Other Products</option>
-            </select>
-            <button type="submit" class="submit-btn">Secure Free Call</button>
-          </div>
-        </form>
-        <div id="formFeedback" style="margin-top:15px; font-weight:600; color:var(--blue); display:none;"></div>
-      </div>
+<div class="container">
 
-    </div>
-  </div>
+<div class="consult">
+
+<h2>🎯 FREE CONSULTING SESSION</h2>
+
+<p>
+Not sure which loan is right for you? Our experts will compare lenders, explain eligibility,
+improve approval chances and guide you toward the best financing option — completely FREE.
+</p>
+
+<ul>
+<li>✔ Personalized Financial Guidance</li>
+<li>✔ Loan Eligibility Assessment</li>
+<li>✔ Documentation Assistance</li>
+<li>✔ Best Bank Comparison</li>
+<li>✔ No Consultation Charges</li>
+</ul>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="why-choose-us">
-  <div class="container">
-    <h2>Why Choose Us?</h2>
-    <p class="sub">Committed to transparency and swift delivery across every single engagement.</p>
-    <div class="features">
-      <div class="feature">
-        <h3>Fast Processing</h3>
-        <p>Minimized operational pipelines mean significantly faster turnaround steps down to final disbursal timelines.</p>
-      </div>
-      <div class="feature">
-        <h3>100+ Lending Partners</h3>
-        <p>Broad alternative optionality removes limitations, giving you full comparative transparency under one roof.</p>
-      </div>
-      <div class="feature">
-        <h3>Expert Guidance</h3>
-        <p>Continuous procedural monitoring navigates standard documentation bottlenecks painlessly.</p>
-      </div>
-      <div class="feature">
-        <h3>Transparent Service</h3>
-        <p>No sudden trailing fees or surprises. Clear parameters ensure complete financial clarity.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section>
+
+<div class="container">
+
+<h2>Why Choose Us?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>Fast Processing</h3>
+<p>Quick support and efficient loan processing.</p>
+</div>
+
+<div class="feature">
+<h3>100+ Lending Partners</h3>
+<p>Compare multiple options in one place.</p>
+</div>
+
+<div class="feature">
+<h3>Expert Guidance</h3>
+<p>Professional support throughout your loan journey.</p>
+</div>
+
+<div class="feature">
+<h3>Transparent Service</h3>
+<p>No hidden surprises, only honest advice.</p>
+</div>
+
+</div>
+
+</div> 
 
 <section id="emi">
-  <div class="container">
-    <h2>Interactive EMI Calculator</h2>
-    <p class="sub">Adjust parameters below to dynamically see estimated monthly repayment metrics instantly.</p>
-    
-    <div class="emi-container">
-      <div class="calculator-layout">
-        <div class="inputs-side">
-          <div class="input-group">
-            <label>Loan Amount: <span id="amount-val">₹ 10,00,000</span></label>
-            <input type="range" id="amount" min="100000" max="10000000" step="50000" value="1000000" oninput="updateCalculations()">
-          </div>
-          
-          <div class="input-group">
-            <label>Interest Rate: <span id="rate-val">8.5%</span></label>
-            <input type="range" id="rate" min="5" max="20" step="0.1" value="8.5" oninput="updateCalculations()">
-          </div>
-          
-          <div class="input-group">
-            <label>Tenure: <span id="years-val">5 Years
+
+<div class="container">
+
+<h2>EMI Calculator</h2>
+
+<div class="emi">
+
+<input type="number" id="amount" placeholder="Loan Amount">
+
+<input type="number" id="rate" placeholder="Interest Rate (%)">
+
+<input type="number" id="years" placeholder="Loan Tenure (Years)">
+
+<button onclick="calculateEMI()">Calculate EMI</button>
+
+<div id="result" class="result"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<div class="container">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq">
+<h3>How fast can a loan be approved?</h3>
+<p>Approval depends on the lender and documentation provided.</p>
+</div>
+
+<div class="faq">
+<h3>Do I need a high credit score?</h3>
+<p>A higher score helps, but we can help explore suitable lender options.</p>
+</div>
+
+<div class="faq">
+<h3>Can I compare multiple banks?</h3>
+<p>Yes. We work with 100+ Banks and NBFCs.</p>
+</div>
+
+<div class="faq">
+<h3>Is the consultation really free?</h3>
+<p>Yes. Initial consultation and loan guidance are completely free.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<div class="contact">
+
+<p><strong>Owner:</strong> Machhindra Patil</p>
+
+<p><strong>Phone:</strong> 7738944625</p>
+
+<p><strong>Email:</strong> machhindra6119@gmail.com</p>
+
+<p>
+<strong>Office Address:</strong><br>
+102 First Floor, Shreeji Avenue,<br>
+Opp. Nilkanth shrushti,<br>
+Wadeghar, Kalyan (West), Maharashtra 421301
+</p>
+
+<p>
+We help customers choose the right loan solution through expert consultation and lender comparison.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<h3>THE LOAN HOUSE</h3>
+<p>Making Loans Simple • Trusted Financial Guidance</p>
+</footer>
+
+<a href="https://wa.me/917738944625" target="_blank" class="whatsapp">
+WhatsApp Us
+</a>
+
+<script>
+
+function calculateEMI(){
+
+let P=parseFloat(document.getElementById("amount").value);
+let annual=parseFloat(document.getElementById("rate").value);
+let years=parseFloat(document.getElementById("years").value);
+
+if(!P || !annual || !years){
+document.getElementById("result").innerHTML="Please enter all values.";
+return;
+}
+
+let r=annual/12/100;
+let n=years*12;
+
+let emi=(P*r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);
+
+document.getElementById("result").innerHTML=
+"Estimated EMI: ₹ " + emi.toFixed(2) + " / month";
+
+}
+
+</script>
+
+</body>
+  </html>
